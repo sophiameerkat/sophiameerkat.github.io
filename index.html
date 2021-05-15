@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Login or Register Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"/>
-    <style>
-      html, body {
-        display: flex;
-        justify-content: center;
-        font-family: Roboto, Arial, sans-serif;
-        font-size: 15px;
-      }
-      form {
-        border: 5px solid #f1f1f1;
-      }
-      input[type=text], input[type=password] {
-        width: 100%;
-        padding: 16px 8px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
-      button {
-        background-color: #DFB9F0;
-        color: white;
-        padding: 14px 0;
-        margin: 10px 0;
-        border: none;
-        cursor: grabbing;
-        width: 100%;
-      }
-      h1 {
-        text-align:center;
-        color: #87C0E5;
-        font-size: 50px; 
-        font-family: Bradley Hand;
-      }
-      h4 {
-        text-align:center;
-      }
-      button:hover {
-        opacity: 0.8;
-      }
-      .formcontainer {
-        text-align: left;
-        margin: 24px 50px 12px;
-      }
-      .container {
-        padding: 16px 0;
-        text-align:left;
-      }
-      span.psw {
-        float: right;
-        padding-top: 0;
-        padding-right: 15px;
-      }
-      /* Change styles for span on extra small screens */
-      @media screen and (max-width: 300px) {
-      span.psw {
-        display: block;
-        float: none;
-      }
-    </style>
-  </head>
-  <body>
-    <form action="/" method="POST">
-      <h1>Login or Register</h1>
-      <div class="formcontainer">
-      <hr/>
-      <div class="container">
-        <label for="uname" style="font-family: Copperplate; font-size: 20px"><strong>Username</strong></label>
-        <input type="text" style="font-family: Comic Sans MS; font-size: 14px" placeholder="Enter Username" name="uname" required=""/>
-        <label for="psw" style="font-family: Copperplate; font-size: 20px"><strong>Password</strong></label>
-        <input type="password" style="font-family: Comic Sans MS; font-size: 14px" placeholder="Enter Password" name="psw" required=""/>
-      </div>
-      <button style="font-family: Comic Sans MS; font-size: 15px" type="submit">Login or Register</button>
-    
-  </div></form></body>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: Copperplate; 
+  font-size: 14px;
+}
+
+input[type=submit] {
+  background-color: #87C0E5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Comic Sans MS;
+}
+
+input[type=submit]:hover {
+  background-color: #A6CCE5;
+  font-family: Comic Sans MS;
+  font-size: 13px;
+}
+
+.previous {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.videocontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+button {
+  background-color: #DFB9F0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Comic Sans MS;
+}
+
+button:hover {
+    opacity: 0.8;
+    font-size: 14px;
+    font-family: Comic Sans MS;
+}
+
+h3 {
+  font-family: Bradley Hand;
+  font-size: 30px;
+  color: #87C0E5;
+}
+
+</style>
+</head>
+<body>
+
+<div class="previous">
+  <h3>Previous Message</h3>
+</div>
+
+<div class="container">
+  <h3>Tell Me Something!</h3>
+  <form action="/mainpage.html" method="POST">
+    <label for="title" style="font-family: Copperplate; font-size: 20px">Message Title</label>
+    <input style="font-family: Comic Sans MS; font-size: 14px" type="text" id="title" name="title" placeholder="Add Title.."/>
+
+    <label for="subject" style="font-family: Copperplate; font-size: 20px">Message Content</label>
+    <input style="font-family: Comic Sans MS; font-size: 14px" type="text" id="subject" name="subject" placeholder="Add Content.."/>
+
+    <input type="submit" value="Submit"/>
+  </form>
+  <br>
+  <button onclick="window.location='index.html'">Logout</button>
+</div>
+
+<div class="videocontainer">
+  <h3>My Demo Video for StrPet Project</h3>
+  <p style="font-family: Georgia; font-size: 15px; color: #AEAEAF">StraPet is an iOS APP Project that aims to help stray animals. There are three main task for this project, including uploading, discovering and volunteering. See the demo video for more information.</p>
+  <video width="320" height="240" controls>
+    <source src="Demo_Video_Upload.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+</body>
 </html>
